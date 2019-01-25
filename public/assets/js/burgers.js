@@ -14,7 +14,7 @@ $(function() {
       data: newDevouredStatus
     }).then(
       function() {
-        console.log("changed sleep to", newstatus);
+        console.log("changed devoured to", newStatus);
         // Reload the page to get the updated list
         location.reload();
       }
@@ -26,8 +26,8 @@ $(function() {
     event.preventDefault();
 
     var newBurger = {
-      name: $("#burg").val().trim(),
-      devoured: $("[name=devoured]:checked").val().trim()
+      name: $("#burg").val().trim()
+      //devoured: $("[name=devoured]:checked").val().trim()
     };
 
     // Send the POST request.
@@ -40,15 +40,7 @@ $(function() {
         // Reload the page to get the updated list
         location.reload();
       }
-    //$(".delete-cat").on("click", function(event){
-    //  
-    //event.preventDefault();
-    //  $.ajax("/api.cats/"+id,{
-    //    type: "DELETE",
-    //  }).then(
-    //    function()
-    //  )
-    //  });
+   
      
     );
   });
